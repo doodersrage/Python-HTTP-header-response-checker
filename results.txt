@@ -1,0 +1,3 @@
+200	http://virginiabeachwebdevelopment.com/portfolio	
+200	http://virginiabeachwebdevelopment.com/contact-us	
+200	http://virginiabeachwebdevelopment.com/links	
