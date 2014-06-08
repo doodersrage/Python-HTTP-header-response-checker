@@ -1,12 +1,18 @@
 import requests
 
+# set results file
 SAVEFILE = "results.txt"
+# set page list file name
 FILENAME = "pages.txt"
+# set domain string for replacement
 REPLACE = "http://virginiabeachwebdevelopment.com/"
+# set new domain string
 NEWURL = "http://virginiabeachwebdevelopment.com/"
+
 #clear output file
 f = open(SAVEFILE, 'r+')
 f.truncate()
+f.close()
 
 # init counters
 REDCNT = 0
@@ -23,8 +29,10 @@ for line in f.readlines():
     newlink = line.strip().replace(REPLACE, NEWURL);
     # get header response
     conn = requests.get(newlink)
-
+    
+    # gather response code
     response = conn.status_code
+    
     # record redirected pages
     if response == 301 or response == 302:
         newpage = conn.url
