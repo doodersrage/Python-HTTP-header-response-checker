@@ -26,7 +26,7 @@ f=open(FILENAME,'r')
 # walk through link file
 for line in f.readlines():
 
-    newlink = line.strip().replace(REPLACE, NEWURL);
+    newlink = line.strip().replace(REPLACE, NEWURL)
     # get header response
     conn = requests.get(newlink)
     
